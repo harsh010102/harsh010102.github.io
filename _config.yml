@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Harsh's homepage"
 title_separator          : "-"
 name                     : "Harsh Parikh"
-description              : "personal description"
+description              : "AI researcher and venture scout — AI engineering, deep-tech VC, and climate/energy applications."
 url                      :  https://harsh010102.github.io/-./ # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "academicpages/academicpages.github.io"
@@ -82,12 +82,12 @@ analytics:
 author:
   name             : "Harsh Parikh"
   avatar           : "profile_pic.jpeg"
-  bio              : "Climate Technology and Computer Science."
-  location         : "Saarbrucken, Germany"
-  employer         : "Max Planck Insitute Software Systems" 
-  pubmed           : 
+  bio              : "AI researcher and venture scout. AI engineering, deep-tech VC, and climate/energy applications."
+  location         : "Munich, Germany"
+  employer         : "NXP Semiconductors / TU Munich"
+  pubmed           :
   googlescholar    : "https://scholar.google.com/citations?user=z2T2mP4AAAAJ&hl=en"
-  email            : "hrshrkh112@gmail.com"
+  email            : "harsh.parikh@tum.de"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
