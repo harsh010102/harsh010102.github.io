@@ -39,3 +39,72 @@
 @import "vendor/font-awesome/brands";
 @import "vendor/magnific-popup/magnific-popup";
 @import "print";
+
+/* ============================================================
+   Modern refresh (custom) — added for a cleaner, contemporary look.
+   Safe overrides appended after all theme imports; remove this block to revert.
+   ============================================================ */
+:root {
+  --accent: #2563eb;
+  --accent-dark: #1e40af;
+  --ink: #1f2937;
+}
+html { font-size: 17px; scroll-behavior: smooth; }
+body {
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+h1, h2, h3, h4, .page__title, .archive__item-title, .site-title {
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  letter-spacing: -0.015em;
+  font-weight: 700;
+  color: #111827;
+}
+.page__content p, .page__content li { line-height: 1.75; }
+a { color: var(--accent); transition: color .15s ease; }
+a:hover { color: var(--accent-dark); }
+
+/* Sticky, frosted masthead */
+.masthead {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(255,255,255,0.82);
+  -webkit-backdrop-filter: saturate(180%) blur(10px);
+  backdrop-filter: saturate(180%) blur(10px);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 1px 12px rgba(0,0,0,0.04);
+}
+.greedy-nav { background: transparent; }
+.site-title { font-weight: 800; letter-spacing: -0.02em; }
+
+/* Author sidebar: rounded avatar with a soft ring */
+.author__avatar img {
+  border-radius: 18px;
+  box-shadow: 0 8px 26px rgba(0,0,0,0.14);
+  border: 3px solid #fff;
+  max-width: 210px;
+}
+.author__name { font-weight: 700; letter-spacing: -0.01em; }
+
+/* Archive / post entries as subtle cards */
+.archive__item {
+  padding: 1.1em 1.2em;
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 14px;
+  background: #fff;
+  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+}
+.archive__item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  border-color: rgba(37,99,235,0.25);
+}
+.archive__item-title { margin-top: 0; }
+
+.btn--primary, .btn--info, .btn--success { border-radius: 10px; font-weight: 600; }
+
+/* Post images: rounded with soft shadow */
+.page__content img { border-radius: 12px; box-shadow: 0 8px 28px rgba(0,0,0,0.08); }
+
+.page__footer { border-top: 1px solid rgba(0,0,0,0.06); }
