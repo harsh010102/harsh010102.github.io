@@ -2,7 +2,7 @@
 title: "Does an Unlearned Language Model Truly Forget? Reading the Model's Mind, Layer by Layer"
 date: 2026-08-05
 permalink: /posts/2026/08/mechanistic-interpretability-of-unlearning/
-excerpt: "My master's thesis asks a deceptively simple question. When we make a model *forget* a fact, is the knowledge gone, or just hidden? Using mechanistic interpretability on the Hubble benchmark, the answer turns out to be: usually just hidden. Here's the story, in pictures."
+excerpt: "My master's thesis asks a deceptively simple question. When we make a model *forget* a fact, is the knowledge gone, or just hidden? Using mechanistic interpretability on the Hubble benchmark, the answer is usually 'just hidden'. Here is the story, in pictures."
 header:
   teaser: /images/blog_confidence.png
 tags:
@@ -42,16 +42,16 @@ On the left, the model that knows converges confidently to the right birth month
 token instead. The fact is **suppressed at the output, not erased from the model.** That distinction,
 *suppression vs. erasure*, is the heart of the thesis.
 
-## The finding that surprised me most: confidence ≠ knowledge
+## Confidence is not knowledge
 
-Here's where it gets uncomfortable for the metrics people usually trust. I lined up every model's final
+The metrics people usually trust break down here. I lined up every model's final
 prediction on the same question:
 
 <img src="/images/blog_confidence.png" alt="Bar chart: all six models are confident, but only the one that knows is correct" width="640">
 
 Three different unlearning methods each output a **wrong** token at **~100% confidence**, the *same*
-confidence as the model that actually knows the answer. In other words, **a probability- or
-confidence-based metric literally cannot tell "confidently knows" apart from "confidently deflects."**
+confidence as the model that actually knows the answer. **A probability- or
+confidence-based metric cannot tell "confidently knows" apart from "confidently deflects."**
 If your success criterion is "the model stopped saying it, and seems sure," you can be completely fooled.
 
 ## Four different ways to "forget"
@@ -69,7 +69,7 @@ One benchmark verdict; four genuinely different internal mechanisms. The output 
 
 ## The same method can forget at one size and fail at another
 
-I ran everything at two model scales (1B and 8B parameters). A striking result: two methods that cleanly
+I ran everything at two model scales (1B and 8B parameters). Two methods that cleanly
 suppress the fact at 8B **leak the correct answer at 1B**. The unlearning simply doesn't take hold at
 the smaller scale, even though the training "succeeded." Only one method was robust across both sizes.
 Again, this is invisible if you only look at aggregate scores.
